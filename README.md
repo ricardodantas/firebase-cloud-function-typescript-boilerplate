@@ -1,61 +1,12 @@
-## Cloud Functions for Firebase: getting started with TypeScript
+# Cloud Functions Typescript Scaffold for Firebase
 
-This is an example Firebase project for using
-[TypeScript](https://www.typescriptlang.org/) with
-[Cloud Functions for Firebase](https://firebase.google.com/products/functions)
+This is a
+[TypeScript](https://www.typescriptlang.org/) scaffold for
+ Firebase [Cloud Functions](https://firebase.google.com/products/functions).
 
-### Why TypeScript?
+ Based on [Firebase official samples](https://github.com/firebase/functions-samples/tree/master/typescript-getting-started).
 
-[TypeScript](https://www.typescriptlang.org/) is a typed superset of JavaScript
-that compiles to plain JavaScript.
-
-One of the biggest challenges with developing in JavaScript is that it is
-very easy to write code that has runtime errors. TypeScript enables the fast
-development of JavaScript with optional types. When types are used,
-supported editors provide auto-suggest for methods and properties along
-with syntax highlighting of errors, which speeds development.
-
-TypeScript supports targeting different browsers, and optimizes
-the resulting JavaScript. It is much easier to write clean, consistent code
-across a project and development team.  TypeScript offers support for the
-latest and evolving JavaScript features like async functions and decorators,
-to help build robust components.
-
-For a nice intro to TypeScript, check out the [TypeScript PlayGround](https://www.typescriptlang.org/play/index.html).
-
-### What is different about TypeScript in this example?
-
-The TypeScript source is in `functions/src` and then we need to do a build
-step before deploying (see steps below).  The main Cloud Function entry
-point is `src/index.ts` which compiled to `src/index.js` and that is specified
-in `functions/package.json`.
-
-There are two key differences to the example Cloud Function:
-
-* `require` -> `import`
-* `exports.` -> `export let`
-
-JavaScript:
-```
-var functions = require('firebase-functions');
-
-exports.helloWorld = functions.https.onRequest((request, response) => {
- response.send("Hello from Firebase!\n\n");
-});
-```
-
-TypeScript:
-```
-import * as functions from 'firebase-functions'
-
-export let helloWorld = functions.https.onRequest((request, response) => {
- response.send("Hello from Firebase!\n\n");
-});
-```
-
-
-
-### Project Setup
+## Project Setup
 
 This project was set up using [yarn](https://yarnpkg.com) which will ensure
 that your deployed Cloud Functions are using the exact same versions of
